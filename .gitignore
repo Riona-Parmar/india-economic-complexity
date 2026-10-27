@@ -1,0 +1,38 @@
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Local datasets: do not upload raw or intermediate data
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Keep a small README in each data folder
+!data/raw/README.md
+!data/interim/README.md
+!data/processed/README.md
+
+# Generated reports and large outputs
+outputs/*
+!outputs/reports/
+outputs/reports/*
+!outputs/reports/README.md
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db

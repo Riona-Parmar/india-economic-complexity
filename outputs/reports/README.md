@@ -1,0 +1,1 @@
+Store project reports, evaluation summaries, and relevant visualisations. Avoid committing large generated files.
