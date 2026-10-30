@@ -1,0 +1,26 @@
+feature,definition,units,availability
+export_value_current,Current-year exports,USD,As-of year
+log_export_value,Natural log of 1 + current exports,log(USD+1),As-of year
+rca_current,Calculated Balassa RCA,Ratio,As-of year
+rca3_current,Three-year rolling average RCA,Ratio,As-of year
+m_current,Binary indicator: RCA3 >= 1,0/1,As-of year
+pci_current,Product complexity index,Atlas index,As-of year
+eci_current,Country ECI proxy,Mean PCI proxy,As-of year
+atlas_distance_current,Atlas distance feature,Atlas index,As-of year
+atlas_cog_current,Atlas COG feature,Atlas index,As-of year
+export_value_lag1,Exports one year before as-of year,USD,As-of year - 1
+rca_lag1,Calculated RCA one year before as-of year,Ratio,As-of year - 1
+rca3_lag1,RCA3 one year before as-of year,Ratio,As-of year - 1
+m_lag1,Binary RCA3 specialization indicator one year earlier,0/1,As-of year - 1
+rca_lag3,Calculated RCA three years before as-of year,Ratio,As-of year - 3
+rca3_lag3,RCA3 three years before as-of year,Ratio,As-of year - 3
+m_lag3,Binary RCA3 specialization indicator three years earlier,0/1,As-of year - 3
+log_export_change_1y,Difference in log(1 + exports) over one year,Log difference,As-of year and prior year
+log_export_change_3y,Difference in log(1 + exports) over three years,Log difference,As-of year and three years earlier
+rca3_change_3y,Change in RCA3 over three years,RCA difference,As-of year and three years earlier
+lag1_available,Whether one-year lag exists,0/1,Historical availability
+lag3_available,Whether three-year lag exists,0/1,Historical availability
+name,Product description,Text,Static metadata
+hs_section,HS chapter field in project mapping,Code,Static metadata
+sector,Project-defined goods sector,Category,Static metadata
+sector_missing,Whether sector metadata is missing,0/1,Static metadata

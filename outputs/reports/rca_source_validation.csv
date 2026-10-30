@@ -1,0 +1,2 @@
+rows_read,rca_values_compared,source_rca_missing,mean_absolute_error,max_absolute_error,median_relative_error,p99_relative_error,matches_within_tolerance
+6752528,6752511,17,0.18405577111592114,13586.806663341269,0.026741420521957493,0.7987698062519653,2385289

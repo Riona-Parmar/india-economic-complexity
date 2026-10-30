@@ -1,0 +1,21 @@
+﻿first_year: 1995
+last_year: 2024
+product_level: 4
+
+rca_low: 0.25
+rca_high: 1.0
+horizon: 5
+
+windows: [2000, 2005, 2010, 2015]
+test_windows: [2010, 2015]
+
+india: IND
+peers: [VNM, BGD, MEX, IDN, TUR]
+
+seed: 42
+tuning_budget: 20
+
+country_filter:
+  min_years_present: 25
+  min_total_exports: 10000000000
+  preserve_required_countries: true
