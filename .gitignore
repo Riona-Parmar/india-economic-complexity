@@ -36,3 +36,15 @@ outputs/reports/*
 .vscode/
 .DS_Store
 Thumbs.db
+
+# P1 handoff: selected processed datasets
+!data/processed/trade_rca_v1.parquet
+!data/processed/model_features_v1.parquet
+!data/processed/labels_v1.parquet
+!data/processed/products_v1.parquet
+!data/processed/recovery_labels_v1.parquet
+!data/processed/country_year_sector_trade.csv
+
+# P1 handoff: reports
+!outputs/reports/*.md
+!outputs/reports/*.csv
