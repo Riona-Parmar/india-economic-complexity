@@ -56,3 +56,49 @@ Core artifact and label-eligibility checks passed. Confirm the Drive upload and 
 - Current project decision: retain calculated standard Balassa RCA and its associated labels as the primary methodology. Preserve the sensitivity audit outputs and document the source-field discrepancy as unresolved.
 - Limitation: the sensitivity analysis is not evidence that the two RCA definitions are interchangeable. The precise cause of the source `export_rca` discrepancy remains unverified.
 - Status: P1 data construction and internal validation passed, subject to the documented RCA methodology limitation.
+
+## P4 network pruning, interactive visualization, and confidence intervals — 2026-11-07
+
+### Artifacts generated
+
+- `outputs/network/network_A2010_nodes.parquet`
+  - Rows: 1,243 products
+  - Columns: `product`, `x`, `y`, `name`, `sector`, `pci`
+  - Fixed-seed spring layout (`seed=42`, `k=0.3`, `weight=phi`)
+
+- `outputs/network/network_A2010_edges.parquet`
+  - Rows: 19,418 pruned edges
+  - Columns: `product_i`, `product_j`, `phi`
+  - Pruned using NetworkX: Maximum Spanning Tree (1,242 edges) union high-proximity edges ($\phi \ge 0.40$, 19,364 edges), achieving a 97.5% reduction from 771,903 initial undirected edges
+
+- `outputs/network/network_A2010.parquet`
+  - Combined sentinel file with `table` tag column containing nodes and edges
+
+- `outputs/network/product_space_2010_p3.html`
+  - Standalone interactive Plotly visualization of the product space
+  - 1,243 nodes sized by PCI and colored across 20 distinct sectors
+  - 19,418 thin pruned edges
+  - 373 products exported with comparative advantage by India in 2010 ($m=1$) highlighted with bold 2.5px borders
+  - XGBoost top-20 predicted emergence products for India overlaid as gold star markers with probability scores
+
+- `outputs/predictions_xgboost_v1.parquet`
+  - Rows: 5,205
+  - Columns: `asof_year`, `country`, `product`, `score`
+  - Evaluated across test windows 2010 and 2015 for India and peer countries
+
+- `outputs/metrics_xgboost_v1.parquet` & `outputs/metrics_xgboost_v1.csv`
+  - Point-estimate evaluation metrics calculated via P2 exact evaluation harness
+  - 95% bootstrap confidence intervals (1,000 iterations with replacement, seed 42) for Precision@20 and PR-AUC:
+    - 2010 India: Precision@20 = 0.0500 [0.0000, 0.2000]; PR-AUC = 0.1584 [0.0089, 0.6667]
+    - 2010 Peers: Precision@20 = 0.0200 [0.0000, 0.0400]; PR-AUC = 0.0093 [0.0053, 0.0189]
+    - 2010 All: Precision@20 = 0.0250 [0.0000, 0.0583]; PR-AUC = 0.0208 [0.0069, 0.0903]
+    - 2015 India: Precision@20 = 0.0500 [0.0000, 0.1500]; PR-AUC = 0.0667 [0.0476, 0.2308]
+    - 2015 Peers: Precision@20 = 0.0100 [0.0000, 0.0400]; PR-AUC = 0.0219 [0.0063, 0.0855]
+    - 2015 All: Precision@20 = 0.0167 [0.0000, 0.0417]; PR-AUC = 0.0210 [0.0068, 0.0733]
+
+### Scripts added
+
+- `src/verify_india_trade_and_labels.py`: Verification of India trade RCA exports and historical emergence labels against `data_report.md`.
+- `src/build_network_A2010.py`: Proximity matrix smoke tests, MST + $\phi \ge 0.40$ network pruning, fixed-seed spring layout, and node metadata attachment.
+- `src/plot_product_space_2010.py`: Day 6 interactive Plotly visualization generation.
+- `src/day7_bootstrap_ci_and_network.py`: Day 7 1,000-iteration bootstrap resampling for 95% CIs and XGBoost top-20 prediction map overlay.
