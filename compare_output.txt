@@ -1,0 +1,143 @@
+
+========== READING PREDICTIONS ==========
+
+========== LOADING LABELS ==========
+
+========== RCA PERSISTENCE BASELINE ==========
+RCA baseline rows: 323621
+
+========== DENSITY BASELINE ==========
+[read] p2\data-p2\density\density_A2000.parquet
+[read] p2\data-p2\density\density_A2005.parquet
+[read] p2\data-p2\density\density_A2010.parquet
+[read] p2\data-p2\density\density_A2015.parquet
+Density baseline rows: 323621
+
+========== IDENTICAL ROW FILTER ==========
+
+Models: ['RankEnsemble_equal_A_F_w025', 'XGB-A-baseline', 'XGB-A-weight_0.25', 'XGB-F-existing', 'density_proximity', 'rca_persistence']
+Rows per model: 323621
+Countries: 164
+Windows: [np.int64(2005), np.int64(2010), np.int64(2015)]
+
+========== CALCULATING METRICS ==========
+
+========== MODEL COMPARISON ==========
+                      model asof_year  countries  units  positives  base_rate    p10    p20    p50   p100    r20    r50   r100  hit20  lift20  pr_auc  roc_auc
+RankEnsemble_equal_A_F_w025      2005        158    158       2205     0.0204 0.0867 0.0712 0.0538 0.0430 0.1353 0.2452 0.3755 0.6899    3.49  0.0400   0.6513
+             XGB-A-baseline      2005        158    158       2205     0.0204 0.0880 0.0709 0.0514 0.0422 0.1321 0.2411 0.3745 0.6899    3.47  0.0496   0.7195
+          XGB-A-weight_0.25      2005        158    158       2205     0.0204 0.0886 0.0734 0.0519 0.0435 0.1405 0.2378 0.3794 0.6772    3.59  0.0511   0.7247
+             XGB-F-existing      2005        158    158       2205     0.0204 0.0797 0.0706 0.0530 0.0430 0.1340 0.2345 0.3734 0.6835    3.45  0.0516   0.7257
+          density_proximity      2005        158    158       2205     0.0204 0.0386 0.0361 0.0333 0.0332 0.0667 0.1566 0.3045 0.4873    1.77  0.0252   0.6110
+            rca_persistence      2005        158    158       2205     0.0204 0.0576 0.0525 0.0486 0.0398 0.0817 0.2014 0.3185 0.5443    2.57  0.0328   0.5828
+RankEnsemble_equal_A_F_w025      2010        153    153       1136     0.0120 0.0634 0.0542 0.0369 0.0284 0.1694 0.2906 0.4289 0.5556    4.51  0.0317   0.6811
+             XGB-A-baseline      2010        153    153       1136     0.0120 0.0667 0.0526 0.0369 0.0284 0.1659 0.2882 0.4259 0.5425    4.37  0.0362   0.7236
+          XGB-A-weight_0.25      2010        153    153       1136     0.0120 0.0686 0.0539 0.0374 0.0281 0.1676 0.2958 0.4181 0.5621    4.48  0.0372   0.7250
+             XGB-F-existing      2010        153    153       1136     0.0120 0.0660 0.0529 0.0370 0.0287 0.1671 0.2863 0.4346 0.5556    4.40  0.0356   0.7247
+          density_proximity      2010        153    153       1136     0.0120 0.0366 0.0297 0.0271 0.0225 0.0908 0.2097 0.3373 0.4444    2.47  0.0161   0.6339
+            rca_persistence      2010        153    153       1136     0.0120 0.0503 0.0438 0.0307 0.0233 0.1253 0.2281 0.3435 0.4967    3.64  0.0233   0.5990
+RankEnsemble_equal_A_F_w025      2015        149    149        850     0.0102 0.0577 0.0443 0.0306 0.0228 0.1912 0.3377 0.4688 0.5369    4.33  0.0273   0.6876
+             XGB-A-baseline      2015        149    149        850     0.0102 0.0550 0.0416 0.0301 0.0225 0.1808 0.3347 0.4653 0.5168    4.07  0.0306   0.7237
+          XGB-A-weight_0.25      2015        149    149        850     0.0102 0.0591 0.0430 0.0299 0.0224 0.1818 0.3398 0.4652 0.5168    4.20  0.0306   0.7238
+             XGB-F-existing      2015        149    149        850     0.0102 0.0591 0.0460 0.0303 0.0218 0.1973 0.3351 0.4596 0.5436    4.50  0.0296   0.7262
+          density_proximity      2015        149    149        850     0.0102 0.0295 0.0238 0.0203 0.0178 0.0936 0.1891 0.3485 0.3423    2.33  0.0123   0.6154
+            rca_persistence      2015        149    149        850     0.0102 0.0369 0.0309 0.0231 0.0180 0.1140 0.2022 0.3384 0.4161    3.02  0.0183   0.5837
+RankEnsemble_equal_A_F_w025       ALL        163    460       4191     0.0143 0.0696 0.0568 0.0407 0.0316 0.1647 0.2903 0.4235 0.5957    3.97  0.0314   0.6664
+             XGB-A-baseline       ALL        163    460       4191     0.0143 0.0702 0.0553 0.0397 0.0312 0.1591 0.2871 0.4210 0.5848    3.86  0.0396   0.7280
+          XGB-A-weight_0.25       ALL        163    460       4191     0.0143 0.0724 0.0571 0.0400 0.0316 0.1629 0.2901 0.4201 0.5870    3.98  0.0409   0.7324
+             XGB-F-existing       ALL        163    460       4191     0.0143 0.0685 0.0567 0.0403 0.0314 0.1655 0.2843 0.4217 0.5957    3.96  0.0403   0.7325
+          density_proximity       ALL        163    460       4191     0.0143 0.0350 0.0300 0.0270 0.0246 0.0834 0.1848 0.3297 0.4261    2.09  0.0172   0.6168
+            rca_persistence       ALL        163    460       4191     0.0143 0.0485 0.0426 0.0344 0.0273 0.1067 0.2106 0.3333 0.4870    2.97  0.0242   0.5869
+
+========== COUNTRY BOOTSTRAP ==========
+
+Paired differences vs rca_persistence:
+window                       model              vs metric   delta  ci_low  ci_high  share_boot_gt0  countries
+  2005 RankEnsemble_equal_A_F_w025 rca_persistence    p20  0.0187  0.0095   0.0288           1.000        158
+  2005 RankEnsemble_equal_A_F_w025 rca_persistence    r50  0.0438  0.0128   0.0733           0.998        158
+  2005 RankEnsemble_equal_A_F_w025 rca_persistence   r100  0.0570  0.0191   0.0946           0.999        158
+  2005 RankEnsemble_equal_A_F_w025 rca_persistence  hit20  0.1456  0.0696   0.2215           1.000        158
+  2005              XGB-A-baseline rca_persistence    p20  0.0184  0.0095   0.0278           1.000        158
+  2005              XGB-A-baseline rca_persistence    r50  0.0397  0.0081   0.0724           0.994        158
+  2005              XGB-A-baseline rca_persistence   r100  0.0560  0.0179   0.0950           0.998        158
+  2005              XGB-A-baseline rca_persistence  hit20  0.1456  0.0696   0.2152           1.000        158
+  2005           XGB-A-weight_0.25 rca_persistence    p20  0.0209  0.0117   0.0304           1.000        158
+  2005           XGB-A-weight_0.25 rca_persistence    r50  0.0363  0.0064   0.0666           0.990        158
+  2005           XGB-A-weight_0.25 rca_persistence   r100  0.0609  0.0265   0.0980           1.000        158
+  2005           XGB-A-weight_0.25 rca_persistence  hit20  0.1329  0.0570   0.2152           1.000        158
+  2005              XGB-F-existing rca_persistence    p20  0.0180  0.0089   0.0272           1.000        158
+  2005              XGB-F-existing rca_persistence    r50  0.0331  0.0063   0.0602           0.996        158
+  2005              XGB-F-existing rca_persistence   r100  0.0549  0.0199   0.0889           1.000        158
+  2005              XGB-F-existing rca_persistence  hit20  0.1392  0.0570   0.2215           1.000        158
+  2005           density_proximity rca_persistence    p20 -0.0165 -0.0282  -0.0047           0.002        158
+  2005           density_proximity rca_persistence    r50 -0.0449 -0.0784  -0.0103           0.006        158
+  2005           density_proximity rca_persistence   r100 -0.0140 -0.0571   0.0317           0.272        158
+  2005           density_proximity rca_persistence  hit20 -0.0570 -0.1394   0.0380           0.113        158
+  2010 RankEnsemble_equal_A_F_w025 rca_persistence    p20  0.0105  0.0029   0.0180           0.998        153
+  2010 RankEnsemble_equal_A_F_w025 rca_persistence    r50  0.0625  0.0139   0.1114           0.995        153
+  2010 RankEnsemble_equal_A_F_w025 rca_persistence   r100  0.0854  0.0306   0.1381           0.999        153
+  2010 RankEnsemble_equal_A_F_w025 rca_persistence  hit20  0.0588 -0.0131   0.1438           0.925        153
+  2010              XGB-A-baseline rca_persistence    p20  0.0088  0.0016   0.0167           0.987        153
+  2010              XGB-A-baseline rca_persistence    r50  0.0601  0.0119   0.1111           0.990        153
+  2010              XGB-A-baseline rca_persistence   r100  0.0824  0.0276   0.1378           0.998        153
+  2010              XGB-A-baseline rca_persistence  hit20  0.0458 -0.0327   0.1242           0.850        153
+  2010           XGB-A-weight_0.25 rca_persistence    p20  0.0101  0.0033   0.0173           0.999        153
+  2010           XGB-A-weight_0.25 rca_persistence    r50  0.0677  0.0177   0.1202           0.996        153
+  2010           XGB-A-weight_0.25 rca_persistence   r100  0.0746  0.0183   0.1315           0.995        153
+  2010           XGB-A-weight_0.25 rca_persistence  hit20  0.0654 -0.0067   0.1503           0.942        153
+  2010              XGB-F-existing rca_persistence    p20  0.0092  0.0013   0.0170           0.984        153
+  2010              XGB-F-existing rca_persistence    r50  0.0582  0.0105   0.1082           0.992        153
+  2010              XGB-F-existing rca_persistence   r100  0.0911  0.0371   0.1439           1.000        153
+  2010              XGB-F-existing rca_persistence  hit20  0.0588 -0.0196   0.1373           0.922        153
+  2010           density_proximity rca_persistence    p20 -0.0141 -0.0235  -0.0046           0.001        153
+  2010           density_proximity rca_persistence    r50 -0.0184 -0.0757   0.0373           0.274        153
+  2010           density_proximity rca_persistence   r100 -0.0062 -0.0593   0.0499           0.422        153
+  2010           density_proximity rca_persistence  hit20 -0.0523 -0.1505   0.0523           0.139        153
+  2015 RankEnsemble_equal_A_F_w025 rca_persistence    p20  0.0134  0.0074   0.0191           1.000        149
+  2015 RankEnsemble_equal_A_F_w025 rca_persistence    r50  0.1356  0.0731   0.2008           1.000        149
+  2015 RankEnsemble_equal_A_F_w025 rca_persistence   r100  0.1304  0.0792   0.1836           1.000        149
+  2015 RankEnsemble_equal_A_F_w025 rca_persistence  hit20  0.1208  0.0403   0.2013           0.998        149
+  2015              XGB-A-baseline rca_persistence    p20  0.0107  0.0054   0.0164           1.000        149
+  2015              XGB-A-baseline rca_persistence    r50  0.1325  0.0725   0.1956           1.000        149
+  2015              XGB-A-baseline rca_persistence   r100  0.1270  0.0745   0.1805           1.000        149
+  2015              XGB-A-baseline rca_persistence  hit20  0.1007  0.0268   0.1745           0.996        149
+  2015           XGB-A-weight_0.25 rca_persistence    p20  0.0121  0.0064   0.0178           1.000        149
+  2015           XGB-A-weight_0.25 rca_persistence    r50  0.1376  0.0749   0.2036           1.000        149
+  2015           XGB-A-weight_0.25 rca_persistence   r100  0.1268  0.0730   0.1822           1.000        149
+  2015           XGB-A-weight_0.25 rca_persistence  hit20  0.1007  0.0201   0.1812           0.992        149
+  2015              XGB-F-existing rca_persistence    p20  0.0151  0.0087   0.0215           1.000        149
+  2015              XGB-F-existing rca_persistence    r50  0.1329  0.0727   0.1946           1.000        149
+  2015              XGB-F-existing rca_persistence   r100  0.1212  0.0719   0.1731           1.000        149
+  2015              XGB-F-existing rca_persistence  hit20  0.1275  0.0403   0.2148           0.997        149
+  2015           density_proximity rca_persistence    p20 -0.0070 -0.0158   0.0013           0.049        149
+  2015           density_proximity rca_persistence    r50 -0.0131 -0.0685   0.0407           0.332        149
+  2015           density_proximity rca_persistence   r100  0.0102 -0.0456   0.0687           0.634        149
+  2015           density_proximity rca_persistence  hit20 -0.0738 -0.1678   0.0268           0.065        149
+   ALL RankEnsemble_equal_A_F_w025 rca_persistence    p20  0.0142  0.0095   0.0190           1.000        163
+   ALL RankEnsemble_equal_A_F_w025 rca_persistence    r50  0.0797  0.0517   0.1086           1.000        163
+   ALL RankEnsemble_equal_A_F_w025 rca_persistence   r100  0.0902  0.0611   0.1229           1.000        163
+   ALL RankEnsemble_equal_A_F_w025 rca_persistence  hit20  0.1087  0.0611   0.1535           1.000        163
+   ALL              XGB-A-baseline rca_persistence    p20  0.0127  0.0080   0.0174           1.000        163
+   ALL              XGB-A-baseline rca_persistence    r50  0.0766  0.0473   0.1074           1.000        163
+   ALL              XGB-A-baseline rca_persistence   r100  0.0877  0.0571   0.1211           1.000        163
+   ALL              XGB-A-baseline rca_persistence  hit20  0.0978  0.0516   0.1429           1.000        163
+   ALL           XGB-A-weight_0.25 rca_persistence    p20  0.0145  0.0097   0.0190           1.000        163
+   ALL           XGB-A-weight_0.25 rca_persistence    r50  0.0796  0.0503   0.1101           1.000        163
+   ALL           XGB-A-weight_0.25 rca_persistence   r100  0.0868  0.0560   0.1204           1.000        163
+   ALL           XGB-A-weight_0.25 rca_persistence  hit20  0.1000  0.0503   0.1462           1.000        163
+   ALL              XGB-F-existing rca_persistence    p20  0.0141  0.0091   0.0191           1.000        163
+   ALL              XGB-F-existing rca_persistence    r50  0.0737  0.0482   0.1009           1.000        163
+   ALL              XGB-F-existing rca_persistence   r100  0.0884  0.0603   0.1196           1.000        163
+   ALL              XGB-F-existing rca_persistence  hit20  0.1087  0.0549   0.1592           1.000        163
+   ALL           density_proximity rca_persistence    p20 -0.0126 -0.0190  -0.0064           0.000        163
+   ALL           density_proximity rca_persistence    r50 -0.0258 -0.0540   0.0047           0.050        163
+   ALL           density_proximity rca_persistence   r100 -0.0036 -0.0372   0.0303           0.423        163
+   ALL           density_proximity rca_persistence  hit20 -0.0609 -0.1188  -0.0022           0.020        163
+
+========================================
+COMPARISON COMPLETED
+========================================
+Summary: results/model_comparison_summary.csv
+Bootstrap: results/model_paired_differences.csv
+
+A confidence interval excluding zero indicates evidence of a difference from the reference model.
