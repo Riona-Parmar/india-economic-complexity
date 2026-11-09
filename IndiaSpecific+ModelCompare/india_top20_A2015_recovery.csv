@@ -1,0 +1,21 @@
+asof_year,rank,product,name,sector,score,rca3_current,pci_current,f_density,reached_RCA>=1_after_5y
+2015,1,6104,"Suits, ensembles, jackets, dresses, skirts, divided skirts, trousers, bib and brace overalls, breeches and shorts (not swimwear), women's or girls', knitted or crocheted","Textiles, apparel and textile articles",0.6488561,0.9897175133466437,-1.321,0.3731499801159562,0
+2015,2,6803,"Slate, worked; and articles of slate or of agglomerated slate","Stone, ceramics, glass, cement and related products",0.6330675,0.9359448925369365,0.282,0.3152305214711047,1
+2015,3,1213,"Cereal straw and husks, unprepared; whether or not chopped, ground, pressed or in the form of pellets","Agriculture, live animals and plant products",0.6311236,0.7860990335139574,-0.569,0.3026950832158763,0
+2015,4,3602,"Prepared explosives, other than propellent powders",Chemicals and petrochemicals,0.6298542,0.9985675780478728,-0.984,0.298078681279598,1
+2015,5,1518,"Animal or vegetable fats, oils, fractions, modified in any way, excluding heading no. 1516; inedible versions of animal or vegetable fats, oils or fractions of this chapter, n.e.s. or included","Food and animal products, beverages, fats, oils and tobacco",0.62320995,0.9320496616156134,-0.277,0.2844094435335396,0
+2015,6,1516,"Animal or vegetable fats and oils and their fractions; partly or wholly hydrogenated, inter-esterified, re-esterified or elaidinised, whether or not refined, but not further prepared","Food and animal products, beverages, fats, oils and tobacco",0.6010144,0.9716352415879829,-1.249,0.3393122859693468,1
+2015,7,4012,"Retreaded or used pneumatic tyres of rubber; solid or cushion tyres, interchangeable tyre treads and tyre flaps, of rubber",Plastics and rubber products,0.5983998,0.9759246382114325,-0.014,0.2769046688487804,1
+2015,8,7401,Copper mattes; cement copper (precipitated copper),Basic metals and fabricated metal products,0.585884,0.8120220112203769,-0.918,0.30871405620157705,0
+2015,9,2848,"Phosphides; whether or not chemically defined, excluding ferrophosphorus",Chemicals and petrochemicals,0.58270997,0.8827358013956551,0.975,0.24781470639121914,0
+2015,10,0907,"Cloves; (whole fruit, cloves and stems)","Agriculture, live animals and plant products",0.5826036,0.9013676619450147,-1.099,0.35137575285868616,0
+2015,11,3101,"Fertilizers; animal or vegetable, whether or not mixed together or chemically treated; fertilizers produced by the mixing or chemical treatment of animal or vegetable products",Chemicals and petrochemicals,0.5665583,0.6901113860939802,-0.298,0.30328509404047016,0
+2015,12,2903,Halogenated derivatives of hydrocarbons,Chemicals and petrochemicals,0.5566482,0.9442414219949163,1.148,0.26296934163686175,1
+2015,13,9604,Hand sieves and hand riddles,"Furniture, toys, miscellaneous manufactures and special goods",0.5527358,0.9692855439536586,0.311,0.3141671862784063,1
+2015,14,3502,Albumins; albuminates and other albumin derivatives,Chemicals and petrochemicals,0.5507333,0.9045957555432143,0.804,0.2687902963120905,0
+2015,15,2917,"Acids; polycarboxylic acids, their anhydrides, halides, peroxides and peroxy-acids; their halogenated, sulphonated, nitrated or nitrosated derivatives",Chemicals and petrochemicals,0.5401797,0.8324431837787308,1.19,0.26504866053937826,1
+2015,16,3801,"Artificial graphite; colloidal or semi-colloidal graphite; preparations based on graphite or other carbon in the form of pastes, blocks, plates or other semi-manufactures",Chemicals and petrochemicals,0.5397376,0.927468243267137,0.845,0.26284379352896914,1
+2015,17,5902,Textile fabrics; tyrecord of high tenacity yarn of nylon or other polyamides polyesters or viscose rayon,"Textiles, apparel and textile articles",0.5344096,0.9890423064044628,0.965,0.29805924765147224,1
+2015,18,5801,"Fabrics; woven pile and chenille fabrics, other than fabrics of heading no. 5802 or 5806","Textiles, apparel and textile articles",0.5286412,0.8364084015707425,0.198,0.2965368601792478,0
+2015,19,7219,Stainless steel; flat-rolled products of width of 600mm or more,Basic metals and fabricated metal products,0.5100605,0.999024975736816,1.537,0.2729250400630453,0
+2015,20,8444,"Textile machinery; for extruding, drawing, texturing or cutting man-made textile materials",Industrial machinery and mechanical equipment,0.50213665,0.691278240416764,1.119,0.2734033229801479,0

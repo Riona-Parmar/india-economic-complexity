@@ -1,0 +1,21 @@
+asof_year,rank,product,name,sector,score,rca3_current,pci_current,f_density,reached_RCA>=1_after_5y
+2010,1,4502,"Natural cork, debacked or roughly squared, or in rectangular (including square) blocks, plates, sheets or strip, (including sharp-edged blanks for corks or stoppers)","Wood, pulp, paper and printing products",0.57697046,0.20510676517095128,0.615,0.3087602982147641,0
+2010,2,5301,"Flax, raw or processed but not spun; flax tow and waste (including yarn waste and garnetted stock)","Textiles, apparel and textile articles",0.5176257,0.1668529611776303,0.64,0.272494576089843,0
+2010,3,5603,"Nonwovens; whether or not impregnated, coated, covered or laminated","Textiles, apparel and textile articles",0.48452762,0.20074775945248555,0.863,0.26794065369104003,0
+2010,4,4501,"Natural cork, raw or simply prepared; waste cork; crushed, granulated or ground cork","Wood, pulp, paper and printing products",0.48204872,0.14644428043853705,0.051,0.3185215190288745,0
+2010,5,1804,"Cocoa; butter, fat and oil","Food and animal products, beverages, fats, oils and tobacco",0.41905385,0.11264264553078973,-1.392,0.3038529143049209,0
+2010,6,4904,"Music, printed or in manuscript, whether or not bound or illustrated","Wood, pulp, paper and printing products",0.3877094,0.07309509874775594,1.592,0.22246343273985061,0
+2010,7,9106,"Time of day recording apparatus and apparatus for measuring, recording or otherwise indicating intervals of time, with clock, watch movement or synchronous motor","Medical devices, optical and precision instruments",0.38002315,0.1906938785037231,0.685,0.26522895313195693,0
+2010,8,8470,"Calculating machines, accounting machines, cash registers, postage-franking machines, ticket-issuing machines and similar machines, incorporating a calculating device",Industrial machinery and mechanical equipment,0.37644795,0.20183953296473947,0.709,0.29227075747318093,0
+2010,9,2528,"Natural borates and concentrates thereof (whether calcined), but not including borates separated from natural brine; natural boric acid containing not less than 85% of H3Bo3, calculated on the dry weight",Mining and non-fuel mineral products,0.37143362,0.07604081523439553,-0.863,0.2991746262569811,0
+2010,10,9406,Buildings; prefabricated,"Furniture, toys, miscellaneous manufactures and special goods",0.36046168,0.1404597688536391,-0.256,0.28090665354866295,0
+2010,11,9031,"Measuring or checking instruments, appliances and machines, n.e.s. or included in this chapter; profile projectors","Medical devices, optical and precision instruments",0.35178825,0.18653886735266997,0.942,0.24426523449430432,0
+2010,12,8705,"Special purpose motor vehicles; not those for the transport of persons or goods (eg breakdown lorries, road sweeper lorries, spraying lorries, mobile workshops, mobile radiological units etc)",Transport equipment,0.35105476,0.15298092305035438,-0.686,0.28625866182298076,0
+2010,13,2209,Vinegar and substitutes for vinegar obtained from acetic acid,"Food and animal products, beverages, fats, oils and tobacco",0.3508707,0.18068949651791463,-0.308,0.29244732966977627,0
+2010,14,3910,Silicones in primary forms,Plastics and rubber products,0.33968705,0.2483172971920622,1.468,0.23392380696368736,0
+2010,15,7503,Nickel; waste and scrap,Basic metals and fabricated metal products,0.32538188,0.11718126899839117,0.395,0.27402625449671303,0
+2010,16,1204,"Oil seeds; linseed, whether or not broken","Agriculture, live animals and plant products",0.31962085,0.19854607812464675,-0.283,0.26978758884259246,1
+2010,17,0803,"Bananas, including plantains; fresh or dried","Agriculture, live animals and plant products",0.31690776,0.15537549606872325,-1.906,0.32298741801819875,0
+2010,18,3916,"Monofilament of which any cross-sectional dimension exceeds 1mm, rods, sticks and profile shapes, whether or not surface-worked but not otherwise worked, of plastics",Plastics and rubber products,0.31505612,0.23056928156395493,0.588,0.2506606602765521,0
+2010,19,2509,Chalk,Mining and non-fuel mineral products,0.30503345,0.059651451751258466,0.046,0.2977397481526107,0
+2010,20,3804,"Residual lyes from the manufacture of wood pulp, whether or not concentrated, desugared or chemically treated, including lignin sulphonates, but excluding tall oil of heading no. 3803",Chemicals and petrochemicals,0.2972153,0.10773780191066416,0.969,0.24828617489855487,0

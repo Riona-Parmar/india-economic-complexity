@@ -48,3 +48,5 @@ Thumbs.db
 # P1 handoff: reports
 !outputs/reports/*.md
 !outputs/reports/*.csv
+
+cmdoutputs.txt

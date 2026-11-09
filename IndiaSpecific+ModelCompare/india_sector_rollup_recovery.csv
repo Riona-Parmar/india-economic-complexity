@@ -1,0 +1,40 @@
+sector,eligible,positives,score_sum,top_score,asof_year
+Basic metals and fabricated metal products,53,11,12.467933,0.573865,2010
+"Textiles, apparel and textile articles",38,8,9.1496315,0.5651012,2010
+Chemicals and petrochemicals,32,4,6.803091,0.51063156,2010
+"Stone, ceramics, glass, cement and related products",11,4,2.8362896,0.72956395,2010
+Plastics and rubber products,9,2,2.2128856,0.5802262,2010
+"Food and animal products, beverages, fats, oils and tobacco",12,2,2.2044942,0.357512,2010
+"Agriculture, live animals and plant products",11,4,1.8395805,0.5215053,2010
+Mining and non-fuel mineral products,8,1,1.8291512,0.6898976,2010
+Industrial machinery and mechanical equipment,4,3,1.3098202,0.40578225,2010
+"Precious metals, gems and jewellery",5,2,1.1820986,0.5173421,2010
+"Furniture, toys, miscellaneous manufactures and special goods",5,1,1.1605579,0.39793068,2010
+"Medical devices, optical and precision instruments",8,0,1.1520891,0.25111726,2010
+"Wood, pulp, paper and printing products",4,0,0.838221,0.3493214,2010
+"Electrical machinery, electronics and electrical equipment",3,1,0.78518957,0.4457878,2010
+Transport equipment,5,0,0.61972904,0.19657636,2010
+"Petroleum, coal and refined fuels",2,2,0.51579005,0.2819841,2010
+"Footwear, headgear and related products",5,1,0.49704054,0.12930892,2010
+"Leather, hides, furs and related products",1,0,0.27895367,0.27895367,2010
+Pharmaceuticals and medicinal products,1,0,0.07082028,0.07082028,2010
+Chemicals and petrochemicals,39,9,10.005144,0.6298542,2015
+Basic metals and fabricated metal products,49,7,9.5890255,0.585884,2015
+"Textiles, apparel and textile articles",39,5,7.9639516,0.6488561,2015
+"Food and animal products, beverages, fats, oils and tobacco",16,3,4.433532,0.62320995,2015
+"Agriculture, live animals and plant products",9,2,2.3536038,0.6311236,2015
+Mining and non-fuel mineral products,12,3,2.2994723,0.42547917,2015
+"Electrical machinery, electronics and electrical equipment",7,4,1.7598913,0.46581453,2015
+Plastics and rubber products,10,2,1.7214369,0.5983998,2015
+"Stone, ceramics, glass, cement and related products",10,2,1.6686678,0.6330675,2015
+Industrial machinery and mechanical equipment,6,0,1.585482,0.50213665,2015
+"Furniture, toys, miscellaneous manufactures and special goods",7,3,1.4136131,0.5527358,2015
+"Medical devices, optical and precision instruments",10,0,1.3800861,0.24758449,2015
+"Wood, pulp, paper and printing products",7,5,1.3386291,0.3150952,2015
+Transport equipment,7,2,1.1122046,0.4105017,2015
+"Precious metals, gems and jewellery",5,1,0.8325103,0.40402785,2015
+"Petroleum, coal and refined fuels",3,1,0.79746825,0.3786218,2015
+"Leather, hides, furs and related products",4,0,0.7579068,0.35946688,2015
+"Footwear, headgear and related products",4,0,0.32844797,0.14269075,2015
+Unknown,1,0,0.1578966,0.1578966,2015
+Pharmaceuticals and medicinal products,1,0,0.14959447,0.14959447,2015

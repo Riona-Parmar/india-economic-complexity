@@ -1,0 +1,21 @@
+asof_year,rank,product,name,sector,score,rca3_current,pci_current,f_density,reached_RCA>=1_after_5y
+2015,1,7506,"Nickel; plates, sheets, strip and foil",Basic metals and fabricated metal products,0.61593074,0.20386361282098822,1.466,0.2505131104921103,0
+2015,2,4403,"Wood in the rough, whether or not stripped of bark or sapwood, or roughly squared","Wood, pulp, paper and printing products",0.6098989,0.14755975240713845,-1.84,0.2981915233535116,0
+2015,3,2522,"Quicklime, slaked lime and hydraulic lime; other than calcium oxide and hydroxide of heading no. 2825",Mining and non-fuel mineral products,0.54858774,0.24413760070747506,-0.522,0.30106021218493395,0
+2015,4,9702,"Engravings, prints and lithographs; original","Furniture, toys, miscellaneous manufactures and special goods",0.46261597,0.10829701682987508,0.958,0.25616553367035116,0
+2015,5,6909,"Ceramic ware for laboratory, chemical, other technical uses; ceramic troughs, tubs, similar receptacles used in agriculture; ceramic pots, jars and similar used in the conveyance or packing of goods","Stone, ceramics, glass, cement and related products",0.44322526,0.11627262026993136,1.673,0.24073072014114058,0
+2015,6,8604,"Railway or tramway maintenance or service vehicles; whether or not self-propelled (eg workshops, cranes, ballast tampers, trackliners, testing coaches and track inspection vehicles)",Transport equipment,0.44224054,0.16765605109421175,0.394,0.2608292270815463,0
+2015,7,8450,Household or laundry-type washing machines; including machines which both wash and dry,Industrial machinery and mechanical equipment,0.43633017,0.17992551212962626,0.754,0.28708112023119764,0
+2015,8,1806,Chocolate and other food preparations containing cocoa,"Food and animal products, beverages, fats, oils and tobacco",0.40667155,0.21158677143040572,-0.117,0.27921400340469194,0
+2015,9,2910,"Epoxides, epoxyalcohols, epoxyphenols and epoxyethers; with a three-membered ring and their halogenated, sulphonated, nitrated or nitrosated derivatives",Chemicals and petrochemicals,0.3620904,0.15042963605771562,1.644,0.256806291557556,0
+2015,10,0803,"Bananas, including plantains; fresh or dried","Agriculture, live animals and plant products",0.34474832,0.19912341550400026,-2.186,0.3499697222457924,0
+2015,11,2509,Chalk,Mining and non-fuel mineral products,0.30823728,0.04666497450991016,0.019,0.31250958539847623,0
+2015,12,4501,"Natural cork, raw or simply prepared; waste cork; crushed, granulated or ground cork","Wood, pulp, paper and printing products",0.30667758,0.05456257672465703,-0.292,0.3142757359888828,0
+2015,13,8470,"Calculating machines, accounting machines, cash registers, postage-franking machines, ticket-issuing machines and similar machines, incorporating a calculating device",Industrial machinery and mechanical equipment,0.30281723,0.07745643614188208,0.596,0.3031629102565738,0
+2015,14,4406,Railway or tramway sleepers (cross-ties) of wood,"Wood, pulp, paper and printing products",0.30111298,0.04440391796824957,-0.351,0.2820781378666327,0
+2015,15,0205,"Meat of horses, asses, mules or hinnies; fresh, chilled or frozen","Food and animal products, beverages, fats, oils and tobacco",0.29377592,0.03239671690785901,0.052,0.27869711823131055,0
+2015,16,9204,Accordions and similar instruments; mouth organs,"Medical devices, optical and precision instruments",0.2819452,0.06766767932422191,1.366,0.27224674693013196,0
+2015,17,8401,"Nuclear reactors; fuel elements (cartridges), non-irradiated, for nuclear reactors, machinery and apparatus for isotopic separation",Industrial machinery and mechanical equipment,0.27927524,0.06191646152004133,1.715,0.25180557616796195,0
+2015,18,3703,"Photographic paper, paperboard and textiles; sensitised, unexposed",Chemicals and petrochemicals,0.27685872,0.18048968622475356,0.954,0.24294379555904638,0
+2015,19,2524,Asbestos,Mining and non-fuel mineral products,0.27147743,0.035402344778177434,-0.653,0.3067770056195782,0
+2015,20,4002,"Synthetic rubber and factice derived from oils, in primary forms or in plates, sheets or strip; mixtures of heading no. 4001 and 4002, in primary forms or in plates, sheets or strip",Plastics and rubber products,0.26409313,0.17539396690301445,1.112,0.25471339474625837,0

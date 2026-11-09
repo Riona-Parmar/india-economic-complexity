@@ -1,0 +1,9 @@
+asof_year,method,eligible,positives,hits@20,hits@50,hits@100
+2010,xgb_reproduction,237,4,1.0,1.0,2.0
+2010,rca_persistence,237,4,2.0,2.0,3.0
+2010,proximity_density,237,4,0.0,0.0,1.0
+2010,random (expected),237,4,0.34,0.84,1.69
+2015,xgb_reproduction,207,1,0.0,1.0,1.0
+2015,rca_persistence,207,1,0.0,0.0,1.0
+2015,proximity_density,207,1,0.0,0.0,1.0
+2015,random (expected),207,1,0.1,0.24,0.48
