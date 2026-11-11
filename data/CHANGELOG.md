@@ -102,3 +102,19 @@ Core artifact and label-eligibility checks passed. Confirm the Drive upload and 
 - `src/build_network_A2010.py`: Proximity matrix smoke tests, MST + $\phi \ge 0.40$ network pruning, fixed-seed spring layout, and node metadata attachment.
 - `src/plot_product_space_2010.py`: Day 6 interactive Plotly visualization generation.
 - `src/day7_bootstrap_ci_and_network.py`: Day 7 1,000-iteration bootstrap resampling for 95% CIs and XGBoost top-20 prediction map overlay.
+
+## Phase 3 Geopolitical Exposure feature construction — 2026-11-07
+
+### Artifacts generated
+
+- `outputs/geopolitical_features.parquet`
+  - Rows: 1,243 products
+  - Columns: `product`, `name`, `sector`, `pci`, `world_import_demand`, `top30_import_demand`, `top30_import_share`, `geopolitical_exposure`, `geopolitical_value_exposure`, `top_importer_country`, `top_importer_share`, `top_importer_gpr`
+  - Integrates country-level Geopolitical Risk (GPR / AI-GPR) indices across 199 countries from Caldara & Iacoviello.
+  - Formulates product-specific geopolitical risk exposure by weighting the import demand share of each product's top 30 importing partner countries by their country GPR scores.
+  - Captures both risk intensity (weighted GPR score, mean: 17.39) and total dollar value at risk (`geopolitical_value_exposure`).
+
+### Scripts added
+
+- `src/compute_geopolitical_exposure.py`: Automated retrieval of GPR datasets, calculation of global product import demand from merchandise trade panels, identification of top 30 importing partner countries, and computation of product-level geopolitical exposure features.
+
