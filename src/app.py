@@ -13,10 +13,57 @@ from pathlib import Path
 import altair as alt
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 ROOT = Path(__file__).resolve().parents[1]
 INDIA = "IND"
-
+SHAP_FEATURE_INFO = {
+    "density": {
+        "name": "Similarity to existing exports",
+        "description": (
+            "India already exports products with related capabilities, "
+            "suggesting that it may be easier to diversify into this product."
+        ),
+    },
+    "pci_current": {
+        "name": "Product complexity",
+        "description": (
+            "The product's complexity contributes to its predicted export opportunity."
+        ),
+    },
+    "rca3_current": {
+        "name": "Existing export capability",
+        "description": (
+            "India's current export strength in this product contributes "
+            "to the model's prediction."
+        ),
+    },
+    "rca3_change_3y": {
+        "name": "Recent export performance",
+        "description": (
+            "Changes in India's three-year average export competitiveness "
+            "influence the predicted opportunity."
+        ),
+    },
+    "eci_current": {
+        "name": "Economic complexity",
+        "description": (
+            "India's current economic complexity contributes to the prediction."
+        ),
+    },
+    "f_ubiquity": {
+        "name": "Global export prevalence",
+        "description": (
+            "Reflects how widely this product is exported across countries."
+        ),
+    },
+    "f_world_growth": {
+        "name": "Global demand growth",
+        "description": (
+            "Captures the recent growth in worldwide exports of this product."
+        ),
+    },
+}
 # ---------------------------------------------------------------------------
 # Data contract
 # ---------------------------------------------------------------------------
@@ -455,69 +502,175 @@ def render_ranking_tab(
 
     render_reasons(table, model, year, explanations)
 
-
-def parse_reasons(text: str) -> list[tuple[str, str]]:
-    """'density increases; pci_current decreases' -> [(readable feature, direction)]."""
+def parse_reasons(text: str) -> list[tuple[str, str, str, str]]:
+    """
+    Convert raw SHAP reasons into:
+    (feature name, direction, friendly name, description).
+    """
     out = []
+
     for part in str(text).split(";"):
         words = part.strip().rsplit(" ", 1)
-        if len(words) == 2:
-            feature, direction = words
-            out.append((SHAP_FEATURE_NAMES.get(feature, feature), direction))
+
+        if len(words) != 2:
+            continue
+
+        feature, direction = words
+
+        info = SHAP_FEATURE_INFO.get(
+            feature,
+            {
+                "name": feature.replace("_", " ").title(),
+                "description": "This feature contributes to the model's prediction.",
+            },
+        )
+
+        out.append((
+            feature,
+            direction,
+            info["name"],
+            info["description"],
+        ))
+
     return out
 
 
 def render_reasons(
     table: pd.DataFrame, model: str, year: int, explanations: pd.DataFrame | None
 ) -> None:
-    """'Reasons' expander: why one ranked product got its score."""
-    with st.expander("Reasons: why did this product get its score?"):
-        labels = dict(zip(table["product"], table["product"] + " · " + table["name"].fillna("")))
-        product = st.selectbox(
-            "Product", list(labels), format_func=lambda p: labels.get(p, p), key="reason_product"
+    """Display human-readable explanations for a ranked product."""
+
+    with st.expander("Why is this product an opportunity?"):
+
+        labels = dict(
+            zip(
+                table["product"],
+                table["product"] + " · " + table["name"].fillna("")
+            )
         )
+
+        product = st.selectbox(
+            "Select a product",
+            list(labels),
+            format_func=lambda p: labels.get(p, p),
+            key="reason_product",
+        )
+
         row = table.loc[table["product"] == product].iloc[0]
 
-        st.markdown(
-            f"**Score breakdown:** Feasibility {row['score']:.3f} × "
-            f"PCI percentile {row['pci_pct']:.3f} = rank_score **{row['rank_score']:.4f}** "
-            f"(PCI {row['pci_latest']:.3f})"
+        # Score breakdown
+        st.markdown("### Opportunity score")
+
+        c1, c2, c3 = st.columns(3)
+
+        c1.metric("Feasibility", f"{row['score']:.3f}")
+        c2.metric("PCI percentile", f"{row['pci_pct']:.3f}")
+        c3.metric("Final rank score", f"{row['rank_score']:.4f}")
+
+        st.caption(
+            f"Calculated as Feasibility ({row['score']:.3f}) "
+            f"× PCI percentile ({row['pci_pct']:.3f}). "
+            f"Product PCI: {row['pci_latest']:.3f}."
         )
 
+        # SHAP explanations are available only for XGBoost
         if model != "xgboost":
             st.info(
-                f"SHAP reasons exist only for xgboost. For **{model}** the score is "
+                f"SHAP explanations are available only for XGBoost. "
+                f"The selected model's score represents "
                 f"{SCORE_MEANING.get(model, 'the model score')}."
             )
             return
+
         if explanations is None:
             st.info(
                 "No SHAP explanations found. Expected "
                 + " or ".join(f"`{p}`" for p in EXPLANATION_FILES)
-                + " (made by `src/explain_xgboost.py` and `src/combine_explanations.py`)."
             )
             return
 
+        # Match the selected product and year
         match = explanations[
-            (explanations["asof_year"] == year) & (explanations["product"] == product)
+            (explanations["asof_year"] == year)
+            & (explanations["product"] == product)
         ]
+
         if match.empty:
-            st.info(f"No SHAP explanation saved for {product} in {year}.")
+            st.info(
+                f"No SHAP explanation saved for product {product} "
+                f"in {year}."
+            )
             return
 
         first = match.iloc[0]
-        st.markdown(f"**Top SHAP drivers** (xgboost probability {first['probability']:.3f}):")
-        for feature, direction in parse_reasons(first["top_3_reasons"]):
-            arrow = "▲ raises" if direction == "increases" else "▼ lowers"
-            st.markdown(f"- {arrow} the score: {feature}")
 
-        if "related_product" in match.columns and match["related_product"].notna().any():
-            st.markdown("**Closest products India already exports:**")
+        # Model prediction
+        st.markdown("### What influences the prediction?")
+
+        st.metric(
+            "XGBoost predicted probability",
+            f"{first['probability']:.1%}",
+        )
+
+        st.caption(
+            "The following factors had the strongest influence "
+            "on the model's prediction."
+        )
+
+        # Human-readable SHAP drivers
+        for feature, direction, name, description in parse_reasons(
+            first["top_3_reasons"]
+        ):
+
+            if direction == "increases":
+                status = "Positive influence"
+                symbol = "▲"
+                color = "green"
+
+            elif direction == "decreases":
+                status = "Negative influence"
+                symbol = "▼"
+                color = "red"
+
+            else:
+                status = "Influence"
+                symbol = "•"
+                color = "gray"
+
+            with st.container(border=True):
+                st.markdown(
+                    f"**{name}**  \n"
+                    f":{color}[{symbol} {status}]"
+                )
+
+                st.write(description)
+
+        st.caption(
+            "Positive influence means the feature pushes the model's "
+            "predicted probability higher. Negative influence means "
+            "it pushes the probability lower. These do not necessarily "
+            "mean the feature value itself increased or decreased."
+        )
+
+        # Related products
+        if (
+            "related_product" in match.columns
+            and match["related_product"].notna().any()
+        ):
+            st.markdown("### Similar products India already exports")
+
             st.dataframe(
-                match[["related_product", "related_name", "proximity"]]
+                match[
+                    ["related_product", "related_name", "proximity"]
+                ]
                 .dropna(subset=["related_product"])
-                .rename(columns={"related_product": "HS code", "related_name": "Product",
-                                 "proximity": "Proximity"}),
+                .rename(
+                    columns={
+                        "related_product": "HS code",
+                        "related_name": "Product",
+                        "proximity": "Similarity",
+                    }
+                ),
                 hide_index=True,
                 width="stretch",
             )
@@ -767,7 +920,7 @@ def render_product_space_tab() -> None:
         "Plotly loads from its CDN, so an internet connection is needed."
     )
     # Our own P4 artifact (trusted), embedded as HTML so its Plotly JS can run.
-    st.iframe(_read_text(str(path)), height=940)
+    components.html(_read_text(str(path)), height=940, scrolling=True)
 
 
 def render_rca_trend_tab(
